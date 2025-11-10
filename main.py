@@ -14,7 +14,7 @@ st.title("AI Resume Critiquer By AkanniOla")
 st.markdown(
     "Upload your resume and get AI-Powered feedback tailored to your needs!")
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets["auth_key"]
 
 uploaded_file = st.file_uploader(
     "Upload your resume (PDF or TXT)", type=["pdf", "txt"])
